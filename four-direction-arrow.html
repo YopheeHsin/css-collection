@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Four Direction Arrow</title>
+<style>
+.arrow-top {
+	top: 360px; left: 220px;
+}
+.arrow-right {
+	top: 220px; left: 80px;
+}
+.arrow-bottom {
+	top: 80px; left: 220px;
+}
+.arrow-left {
+	top: 220px; left: 360px;
+}
+
+
+.arrow-box {
+	position: absolute;
+	background-color: #f0f0f0;
+	border: 1px solid #b9b9b9;
+	padding: 10px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+}
+.arrow-box:after,
+.arrow-box:before {
+	position: absolute;
+	content: "";
+	height: 0;
+	width: 0;
+	border-color: transparent;
+	border-style: solid;
+}
+
+.arrow-top:after, 
+.arrow-top:before {
+	bottom: 100%; left: 50%;
+}
+.arrow-top:after {
+	border-bottom-color: #f0f0f0;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.arrow-top:before {
+	border-bottom-color: #b9b9b9;
+	border-width: 11px;
+	margin-left: -11px;
+}
+
+.arrow-right:after, 
+.arrow-right:before {
+	top: 50%; left: 100%;
+}
+.arrow-right:after {
+	border-left-color: #f0f0f0;
+	border-width: 10px;
+	margin-top: -10px;
+}
+.arrow-right:before {
+	border-left-color: #b9b9b9;
+	border-width: 11px;
+	margin-top: -11px;
+}
+
+.arrow-bottom:after, 
+.arrow-bottom:before {
+	top: 100%; left: 50%;
+}
+.arrow-bottom:after {
+	border-top-color: #f0f0f0;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.arrow-bottom:before {
+	border-top-color: #b9b9b9;
+	border-width: 11px;
+	margin-left: -11px;
+}
+
+.arrow-left:after, 
+.arrow-left:before {
+	top: 50%; right: 100%;
+}
+.arrow-left:after {
+	border-right-color: #f0f0f0;
+	border-width: 10px;
+	margin-top: -10px;
+}
+.arrow-left:before {
+	border-right-color: #b9b9b9;
+	border-width: 11px;
+	margin-top: -11px;
+}
+</style>
+</head>
+<body>
+
+	<div class="arrow-box arrow-top">
+		<p>上箭头<br />top arrow</p>
+	</div>
+
+	<div class="arrow-box arrow-right">
+		<p>右箭头<br />right arrow</p>
+	</div>
+
+	<div class="arrow-box arrow-bottom">
+		<p>下箭头<br />bottom arrow</p>
+	</div>
+
+	<div class="arrow-box arrow-left">
+		<p>左箭头<br />left arrow</p>
+	</div>
+
+</body>
+</html>
