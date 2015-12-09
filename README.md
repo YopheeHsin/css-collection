@@ -1,2 +1,2 @@
 # css-collection
-css collection, for future use
+一些CSS使用方法，以备后用
