@@ -4,3 +4,5 @@
 ***
 
 带箭头的框 [four-direction-arrow.html](http://htmlpreview.github.io/?https://github.com/YopheeHsin/css-collection/blob/master/four-direction-arrow.html)
+
+逐帧精灵动画 [sprite-animation.html](http://htmlpreview.github.io/?https://github.com/YopheeHsin/css-collection/blob/master/sprite-animation.html)
