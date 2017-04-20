@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>radio, checkbox</title>
+<style>
+* { margin: 0; padding: 0; border: 0; }
+body { padding: 50px; }
+h3 { padding: 1em 0 0.5em; }
+ul { list-style: none; }
+.clear-fix:before, .clear-fix:after { content: ""; display: table; }
+.clear-fix:after { clear: both; }
+.clear-fix { *zoom: 1; }
+.br-half {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+
+li {
+	display: block;
+	position: relative;
+	float: left;
+	height: 50px;
+}
+input[type=radio],
+input[type=checkbox] {
+	position: absolute;
+	visibility: hidden;
+}
+label {
+	display: block;
+	position: relative;
+	line-height: 50px;
+	padding: 0 30px 0 35px;
+	cursor: pointer;
+}
+label p {
+	font-size: 16px;
+	color: #9B9B9B;
+}
+.check,
+.check-multi {
+	display: block;
+	position: absolute;
+	border: 5px solid #9B9B9B;
+	width: 16px; height: 16px;
+	top: 12px; left: 0;
+}
+
+.check::before {
+	display: block;
+	position: absolute;
+	content: "";	
+	width: 10px; height: 10px;
+	top: 3px; left: 3px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+input[type=radio]:checked + label .check::before {
+	background-color: #79B435;
+}
+
+.check-multi::before {
+	display: none;
+	position: absolute;
+	content: "";
+	width: 8px; height: 5px;
+	top: 2px; left: 2px;
+	border-left: 4px solid #79B435;
+	border-bottom: 4px solid #79B435;
+	-webkit-transform: rotate(7deg);
+	-moz-transform: rotate(7deg);
+	-ms-transform: rotate(7deg);
+	-o-transform: rotate(7deg);
+	transform: rotate(-40deg);
+}
+input[type=checkbox]:checked + label .check-multi::before {
+	display: block;
+}
+
+input[type=radio]:checked + label .check,
+input[type=checkbox]:checked + label .check-multi {
+	border: 5px solid #79B435;
+}
+input[type=radio]:checked + label p,
+input[type=checkbox]:checked + label p {
+	color: #4A4A4A;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h3>性别</h3>
+<ul class="clear-fix">
+	<li>
+		<input type="radio" name="sex" id="option11" value="先生" checked>
+		<label for="option11">
+			<div class="check br-half"></div>
+			<p>先生</p>
+		</label>
+	</li>
+	<li>
+		<input type="radio" name="sex" id="option12" value="女士">
+		<label for="option12">
+			<div class="check br-half"></div>
+			<p>女士</p>
+		</label>
+	</li>
+</ul>
+<h3>爱好</h3>
+<ul class="clear-fix">
+	<li>
+		<input type="checkbox" name="hobby" id="option21" value="抽烟">
+		<label for="option21">
+			<div class="check-multi"></div>
+			<p>抽烟</p>
+		</label>
+	</li>
+	<li>
+		<input type="checkbox" name="hobby" id="option22" value="喝酒" checked>
+		<label for="option22">
+			<div class="check-multi"></div>
+			<p>喝酒</p>
+		</label>
+	</li>
+	<li>
+		<input type="checkbox" name="hobby" id="option23" value="烫头">
+		<label for="option23">
+			<div class="check-multi"></div>
+			<p>烫头</p>
+		</label>
+	</li>
+</ul>
+</body>
+</html>
