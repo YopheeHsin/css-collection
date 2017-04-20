@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>3D Hover Effect</title>
+<style>
+html, body {
+	margin: 0; padding: 0;
+	width: 100%; height: 100%;
+}
+body {
+	background-color: #edf2f4;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+}
+.card {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	width: 400px; height: 200px;
+	margin: auto;
+	padding: 30px;
+	background-color: white;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	pointer-events: none;
+}
+.card::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0; bottom: -50px;
+	width: 100%; height: 10px;
+	box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+}
+.card .card-content {
+	text-align: center;
+}
+.card h1 {
+	-webkit-transform: translateZ(100px);
+	transform: translateZ(100px);
+}
+.card p {
+	-webkit-transform: translateZ(60px);
+	transform: translateZ(60px);
+}
+.card p+p {
+	-webkit-transform: translateZ(80px);
+	transform: translateZ(80px);
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+	<div class="card-content">
+		<h1>3D Hover Effect</h1>
+		<p><small>hoho</small></p>
+		<p>Just hover around.</p>
+	</div>
+</div>
+
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script>
+var $card = $('.card');
+var ww = $(window).innerWidth();
+var wh = $(window).innerHeight();
+$(document).on('mousemove', function(e) {
+	var ax = -(ww / 2 - e.pageX) / 20;
+	var ay = (wh / 2 - e.pageY) / 10;
+	var rotateStr = 'rotateY(' + ax + 'deg) rotateX(' + ay + 'deg)';
+	$card.attr('style', '-webkit-transform: ' + rotateStr + '; transform: ' + rotateStr);
+});
+</script>
+</body>
+</html>
