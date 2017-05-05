@@ -14,3 +14,5 @@
 3D鼠标悬停效果 [3d-hover-effect.html](https://github.com/YopheeHsin/css-collection/blob/master/3d-hover-effect.html) - [[demo]](http://yopheehsin.github.io/demo/css-collection/3d-hover-effect.html)
 
 逐行显示动画 [line-by-line-animation.html](https://github.com/YopheeHsin/css-collection/blob/master/line-by-line-animation.html) - [[demo]](http://htmlpreview.github.io/?https://github.com/YopheeHsin/css-collection/blob/master/line-by-line-animation.html)
+
+文本溢出显示省略号 [text-truncation-with-ellipsis.html](https://github.com/YopheeHsin/css-collection/blob/master/text-truncation-with-ellipsis.html) - [[demo]](http://htmlpreview.github.io/?https://github.com/YopheeHsin/css-collection/blob/master/text-truncation-with-ellipsis.html)
