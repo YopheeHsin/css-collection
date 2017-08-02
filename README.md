@@ -16,3 +16,5 @@
 逐行显示动画 [line-by-line-animation.html](https://github.com/YopheeHsin/css-collection/blob/master/line-by-line-animation.html) - [[demo]](http://htmlpreview.github.io/?https://github.com/YopheeHsin/css-collection/blob/master/line-by-line-animation.html)
 
 文本溢出显示省略号 [text-truncation-with-ellipsis.html](https://github.com/YopheeHsin/css-collection/blob/master/text-truncation-with-ellipsis.html) - [[demo]](http://htmlpreview.github.io/?https://github.com/YopheeHsin/css-collection/blob/master/text-truncation-with-ellipsis.html)
+
+CodePen按钮动画 [codepen-button-animation.html](https://github.com/YopheeHsin/css-collection/blob/master/codepen-button-animation.html) - [[demo]](http://htmlpreview.github.io/?https://github.com/YopheeHsin/css-collection/blob/master/codepen-button-animation.html)
