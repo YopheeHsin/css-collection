@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hamburger Button Transition</title>
+<style>
+* {
+	margin: 0; padding: 0; border: 0; outline: 0;
+}
+
+.menu-icon-wrapper {
+	margin: 20px;
+}
+
+button {
+	position: relative;
+	height: 42px;
+	width: 42px;
+	cursor: pointer;
+}
+
+button .menu-bar-container,
+button .menu-bar-content {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 28px;
+	height: 2px;
+}
+
+button .menu-bar-container {
+	overflow: hidden;
+}
+
+button .menu-bar-content {
+	background-color: #b5c5d0;
+	transition: all .5s ease-out;
+}
+
+button .menu-bar-container:first-of-type {
+	transform: translateX(7px) translateY(12px);
+}
+
+button .menu-bar-container:first-of-type .menu-bar-content {
+	transition: transform .5s cubic-bezier(.165, .84, .44, 1) .5s;
+}
+
+button .menu-bar-container:nth-of-type(2) {
+	transform: translateX(7px) translateY(20px);
+}
+
+button .menu-bar-container:nth-of-type(2) .menu-bar-content {
+	transition: transform .5s cubic-bezier(.165, .84, .44, 1) .4s;
+}
+
+button .menu-bar-container:nth-of-type(3) {
+	transform: translateX(7px) translateY(28px);
+}
+
+button .menu-bar-container:nth-of-type(3) .menu-bar-content {
+	transition: transform .5s cubic-bezier(.165, .84, .44, 1) .3s;
+}
+
+button .menu-bar-container:nth-of-type(4) {
+	transform: rotate(45deg) translateX(7px) translateY(20px);
+	transform-origin: 21px 21px;
+}
+
+button .menu-bar-container:nth-of-type(4) .menu-bar-content {
+	transform: translateX(-100%);
+	transition: transform .5s cubic-bezier(.165, .84, .44, 1) .1s;
+}
+
+button .menu-bar-container:nth-of-type(5) {
+	transform: rotate(-45deg) translateX(7px) translateY(20px);
+	transform-origin: 21px 21px;
+}
+
+button .menu-bar-container:nth-of-type(5) .menu-bar-content {
+	transform: translateX(100%);
+	transition: transform .5s cubic-bezier(.165, .84, .44, 1) 0s;
+}
+
+button.active .menu-bar-container:first-of-type .menu-bar-content {
+	transform: translateX(100%);
+	transition: transform .5s cubic-bezier(.165, .84, .44, 1) .2s;
+}
+
+button.active .menu-bar-container:nth-of-type(2) .menu-bar-content {
+	transform: translateX(100%);
+	transition: transform .5s cubic-bezier(.165, .84, .44, 1) .1s;
+}
+
+button.active .menu-bar-container:nth-of-type(3) .menu-bar-content {
+	transform: translateX(100%);
+	transition: transform .5s cubic-bezier(.165, .84, .44, 1) 0s;
+}
+
+button.active .menu-bar-container:nth-of-type(4) .menu-bar-content {
+	transform: translateX(0);
+	transition: transform .5s cubic-bezier(.165, .84, .44, 1) .5s;
+}
+
+button.active .menu-bar-container:nth-of-type(5) .menu-bar-content {
+	transform: translateX(0);
+	transition: transform .5s cubic-bezier(.165, .84, .44, 1) .6s;
+}
+</style>
+</head>
+<body>
+
+<div class="menu-icon-wrapper">
+	<button class="toggle-mobile-menu">
+		<span class="menu-bar-container"><span class="menu-bar-content"></span></span>
+		<span class="menu-bar-container"><span class="menu-bar-content"></span></span>
+		<span class="menu-bar-container"><span class="menu-bar-content"></span></span>
+		<span class="menu-bar-container"><span class="menu-bar-content"></span></span>
+		<span class="menu-bar-container"><span class="menu-bar-content"></span></span>
+	</button>
+</div>
+
+<script>
+function addEventListener(el, eventName, handler) {
+	if (el.addEventListener) {
+		el.addEventListener(eventName, handler);
+	} else {
+		el.attachEvent('on' + eventName, function() {
+			handler.call(el);
+		});
+	}
+}
+
+function toggleClass(el, className) {
+	if (el.classList) {
+		el.classList.toggle(className);
+	} else {
+		var classes = el.className.split(' ');
+		var existingIndex = -1;
+		for (var i = classes.length; i--;) {
+			if (classes[i] === className) existingIndex = i;
+		}
+		if (existingIndex >= 0) {
+			classes.splice(existingIndex, 1);
+		} else {
+			classes.push(className);
+		}
+		el.className = classes.join(' ');
+	}
+}
+
+var btn = document.querySelector('button');
+addEventListener(btn, 'click', function() {
+	toggleClass(this, 'active');
+});
+</script>
+</body>
+</html>

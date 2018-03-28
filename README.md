@@ -18,3 +18,5 @@
 文本溢出显示省略号 [text-truncation-with-ellipsis.html](https://github.com/YopheeHsin/css-collection/blob/master/text-truncation-with-ellipsis.html) - [[demo]](http://htmlpreview.github.io/?https://github.com/YopheeHsin/css-collection/blob/master/text-truncation-with-ellipsis.html)
 
 CodePen按钮动画 [codepen-button-animation.html](https://github.com/YopheeHsin/css-collection/blob/master/codepen-button-animation.html) - [[demo]](http://htmlpreview.github.io/?https://github.com/YopheeHsin/css-collection/blob/master/codepen-button-animation.html)
+
+菜单按钮变换效果 [hamburger-button-transition.html](https://github.com/YopheeHsin/css-collection/blob/master/hamburger-button-transition.html) - [[demo]](http://htmlpreview.github.io/?https://github.com/YopheeHsin/css-collection/blob/master/hamburger-button-transition.html)
